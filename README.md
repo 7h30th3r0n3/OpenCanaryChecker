@@ -4,7 +4,7 @@
 - Use watch ./OpenCanaryChecker.sh to get information every 2 seconds 
 
 - This script uses geoiplookup and jq, please install it before any use
-  ```sudo apt install geoiplookup jq ```
+  ```sudo apt install geoip-bin jq ```
 
 Made with love for fun by 7h30th3r0n3
 
