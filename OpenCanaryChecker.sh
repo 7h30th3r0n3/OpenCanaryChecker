@@ -38,7 +38,7 @@ echo "$log_content" | jq -r 'select(.logdata.USERNAME != null and .logdata.PASSW
 echo ""
 
 echo "Source Countries:"
-ips=$(cat /var/log/opencanary.log | jq -r 'select(.logdata.USERNAME!=null or .logdata.PASSWORD!=null) | .src_host' | sort -u)
+ips=$(cat /var/tmp/opencanary.log | jq -r 'select(.logdata.USERNAME!=null or .logdata.PASSWORD!=null) | .src_host' | sort -u)
 declare -A countries_count
 sorted_countries=""
 
