@@ -29,6 +29,13 @@ Total: 3035
 43.163.XXX.XXX, 45.43.XXX.XXX, 59.2.XXX.XXX, 71.6.XXX.XXX, 77.1.XXX.XXX
 82.156.XXX.XXX, 97.90.XXX.XXX
 
+Top 5 attacking IPs :
+180.101.XXX.XXX : 1386
+43.163.XXX.XXX : 286
+180.101.XXX.XXX : 238
+82.156.XXX.XXX : 232
+188.171.XXX.XXX : 124
+
 Top 10 most used username and password pairs:
 root:root = 8
 root:P@ssw0rd = 7
