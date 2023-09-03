@@ -27,6 +27,7 @@ count=$(echo "$unique_ips" | wc -l)
 echo "$count IP Addresses:"
 echo "$unique_ips" | awk '{ORS = (NR % 6 == 0) ? "\n" : ", "} 1'
 echo ""
+echo ""
 
 echo "Top 10 most used username and password pairs:"
 echo "$log_content" | jq -r 'select(.logdata.USERNAME != null and .logdata.PASSWORD != null) | "\(.logdata.USERNAME):\(.logdata.PASSWORD)"' | sort | uniq -c | sort -rn | head -10 | awk '{gsub(/"/, "", $2); printf "%s = %s\n", $2, $1}'
