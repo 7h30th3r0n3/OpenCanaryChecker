@@ -1,5 +1,5 @@
 # OpenCanaryChecker
-- OpenCanaryChecker is a script to parse useful information of opencanary log
+- OpenCanaryChecker is a script to parse useful information of opencanary logs
 - Very useful to get realtime visual information
 - Use watch ./OpenCanaryChecker.sh to get information every 2 seconds 
 
