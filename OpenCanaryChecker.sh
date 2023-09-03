@@ -25,9 +25,14 @@ unique_ips=$(echo "$log_content" | jq -r 'select(.logdata.USERNAME!=null or .log
 count=$(echo "$unique_ips" | wc -l)
 
 echo "$count IP Addresses:"
-echo "$unique_ips" | awk '{ORS = (NR % 6 == 0) ? "\n" : ", "} 1'
+echo "$unique_ips" | awk '{ORS = (NR % 5 == 0) ? "\n" : ", "} 1'
 echo ""
 echo ""
+
+echo "Top 5 attacking IPs :"
+echo "$log_content" | grep "src_host" | jq -r '.src_host' | sort | uniq -c | sort -rn | awk '{print $2, ":", $1}'|head -5
+echo ""
+
 
 echo "Top 10 most used username and password pairs:"
 echo "$log_content" | jq -r 'select(.logdata.USERNAME != null and .logdata.PASSWORD != null) | "\(.logdata.USERNAME):\(.logdata.PASSWORD)"' | sort | uniq -c | sort -rn | head -10 | awk '{gsub(/"/, "", $2); printf "%s = %s\n", $2, $1}'
