@@ -5,7 +5,7 @@
 # Made with love for fun by 7h30th3r0n3
 #
 
-log_content=$(cat /var/log/opencanary.log)
+log_content=$(cat /var/tmp/opencanary.log)
 
 username_count=$(echo "$log_content" | jq -r 'select(.logdata.USERNAME!=null) | .logdata.USERNAME' | sort -u | wc -l)
 password_count=$(echo "$log_content" | jq -r 'select(.logdata.PASSWORD!=null) | .logdata.PASSWORD' | sort -u | wc -l)
