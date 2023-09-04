@@ -1,7 +1,7 @@
 # OpenCanaryChecker
 - OpenCanaryChecker is a script to parse useful information of opencanary logs
 - Very useful to get realtime visual information
-- Use watch ./OpenCanaryChecker.sh to get information every 2 seconds 
+- Use ```watch -n 10 ./OpenCanaryChecker.sh ``` to get information every 2 seconds 
 
 - This script uses geoiplookup and jq, please install it before any use
   ```sudo apt install geoip-bin jq ```
